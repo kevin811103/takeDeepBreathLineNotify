@@ -18,7 +18,9 @@ function pushMessage() {
             'Content-Type': 'application/x-www-form-urlencoded',
         },
         auth: {
-            'bearer': 'FxIZF3SopR0ZDw35pFjTnljiVwCsbVDHXH070wysiUX'
+            'bearer': 'L8yHKBKLi0lmHyGykYEDFJX2a6rTdMQDfyMVu7rvxi0'
+            // localtest: FxIZF3SopR0ZDw35pFjTnljiVwCsbVDHXH070wysiUX
+            // 大學社團: L8yHKBKLi0lmHyGykYEDFJX2a6rTdMQDfyMVu7rvxi0
         },
         form: {
             message: '今天深呼吸了嗎？'
@@ -47,9 +49,8 @@ app.listen(process.env.PORT || 3333, function () {
             if(date.getHours()==10){
                 pushMessage();
             }
-            pushMessage();
         }
-    },3000)
+    },3600000)
     // 3600000
     console.log('Example app listening on port 3000!');
 });
