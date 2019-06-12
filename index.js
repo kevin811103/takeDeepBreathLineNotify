@@ -47,6 +47,7 @@ app.listen(process.env.PORT || 3333, function () {
             if(date.getHours()==10){
                 pushMessage();
             }
+            pushMessage();
         }
     },3000)
     // 3600000
