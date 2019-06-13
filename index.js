@@ -18,9 +18,7 @@ function pushMessage() {
             'Content-Type': 'application/x-www-form-urlencoded',
         },
         auth: {
-            'bearer': 'L8yHKBKLi0lmHyGykYEDFJX2a6rTdMQDfyMVu7rvxi0'
-            // localtest: FxIZF3SopR0ZDw35pFjTnljiVwCsbVDHXH070wysiUX
-            // 大學社團: L8yHKBKLi0lmHyGykYEDFJX2a6rTdMQDfyMVu7rvxi0
+            'bearer': ''
         },
         form: {
             message: '今天深呼吸了嗎？'
@@ -52,5 +50,7 @@ app.listen(process.env.PORT || 3333, function () {
         }
     },3600000)
     // 3600000
+
+    // git push heroku master
     console.log('Example app listening on port 3000!');
 });
