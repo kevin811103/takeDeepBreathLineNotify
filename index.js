@@ -7,7 +7,7 @@ const cookieParser = require('cookie-parser')
 
 app.use(cookieParser())
 app.use(bodyParser.urlencoded({ extended: false }));
-
+const config =require('./config')
 
 
 function pushMessage() {
@@ -18,7 +18,7 @@ function pushMessage() {
             'Content-Type': 'application/x-www-form-urlencoded',
         },
         auth: {
-            'bearer': ''
+            'bearer': config.lineNotifyToken
         },
         form: {
             message: '今天深呼吸了嗎？'
@@ -39,7 +39,9 @@ app.listen(process.env.PORT || 3333, function () {
     console.log("現在時間:",date.getHours())
     // 排除六日
     // 每60分鐘檢查一次
-    setInterval(()=>{
+    
+	pushMessage();
+	setInterval(()=>{
         console.log("現在時間:",date.getDay())
         if((date.getDay()!==6)||(date.getDay()!==0)){
                //0 日  6 六
@@ -52,5 +54,5 @@ app.listen(process.env.PORT || 3333, function () {
     // 3600000
 
     // git push heroku master
-    console.log('Example app listening on port 3000!');
+    console.log('Example app listening on port 3333!');
 });
