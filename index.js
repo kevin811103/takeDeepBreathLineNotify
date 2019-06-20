@@ -32,6 +32,9 @@ function pushMessage() {
 }
 
 
+app.get('/',function(req,res){
+res.send("深呼吸服務啟動成功");
+})
 
 app.listen(process.env.PORT || 3333, function () {
     const date= new Date();
@@ -40,7 +43,7 @@ app.listen(process.env.PORT || 3333, function () {
     // 排除六日
     // 每60分鐘檢查一次
     
-	pushMessage();
+	// pushMessage();
 	setInterval(()=>{
         console.log("現在時間:",date.getDay())
         if((date.getDay()!==6)||(date.getDay()!==0)){

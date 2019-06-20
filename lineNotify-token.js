@@ -1,5 +1,5 @@
 const config ={
-	lineNotifyToken:'FxIZF3SopR0ZDw35pFjTnljiVwCsbVDHXH070wysiUX'
+	lineNotifyToken:'L8yHKBKLi0lmHyGykYEDFJX2a6rTdMQDfyMVu7rvxi0'
 }
 
 module.exports=config
