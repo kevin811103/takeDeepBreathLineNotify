@@ -7,7 +7,7 @@ const cookieParser = require('cookie-parser')
 
 app.use(cookieParser())
 app.use(bodyParser.urlencoded({ extended: false }));
-const config =require('./config')
+const config =require('./lineNotify-token')
 
 
 function pushMessage() {
